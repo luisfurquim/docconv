@@ -28,18 +28,6 @@ Example install of dependencies (not all systems):
     $ sudo apt-get install poppler-utils wv unrtf tidy
     $ go get github.com/JalfResi/justext
 
-### Optional dependencies
-
-To add image support to the `docconv` library you first need to [install and build gosseract](https://github.com/otiai10/gosseract/tree/v2.2.4).
-
-Now you can add `-tags ocr` to any `go` command when building/fetching/testing `docconv` to include support for processing images:
-
-    $ go get -tags ocr code.sajari.com/docconv/...
-
-This may complain on macOS, which you can fix by installing [tesseract](https://tesseract-ocr.github.io) via brew:
-
-    $ brew install tesseract
-
 ## docd tool
 
 The `docd` tool runs as either:
@@ -101,18 +89,18 @@ This should be enough to get you started though.
 package main
 
 import (
-	"fmt"
-	"log"
+   "fmt"
+   "log"
 
-	"code.sajari.com/docconv"
+   "code.sajari.com/docconv"
 )
 
 func main() {
-	res, err := docconv.ConvertPath("your-file.pdf")
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println(res)
+   res, err := docconv.ConvertPath("your-file.pdf")
+   if err != nil {
+      log.Fatal(err)
+   }
+   fmt.Println(res)
 }
 ```
 
@@ -122,20 +110,20 @@ func main() {
 package main
 
 import (
-	"fmt"
-	"log"
+   "fmt"
+   "log"
 
-	"code.sajari.com/docconv/client"
+   "code.sajari.com/docconv/client"
 )
 
 func main() {
-	// Create a new client, using the default endpoint (localhost:8888)
-	c := client.New()
+   // Create a new client, using the default endpoint (localhost:8888)
+   c := client.New()
 
-	res, err := client.ConvertPath(c, "your-file.pdf")
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println(res)
+   res, err := client.ConvertPath(c, "your-file.pdf")
+   if err != nil {
+      log.Fatal(err)
+   }
+   fmt.Println(res)
 }
 ```
