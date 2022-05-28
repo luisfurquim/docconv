@@ -1,13 +1,13 @@
 # docconv
 
-[![Go reference](https://pkg.go.dev/badge/code.sajari.com/docconv.svg)](https://pkg.go.dev/code.sajari.com/docconv)
-[![Build status](https://github.com/sajari/docconv/workflows/Go/badge.svg?branch=master)](https://github.com/sajari/docconv/actions)
-[![Report card](https://goreportcard.com/badge/code.sajari.com/docconv)](https://goreportcard.com/report/code.sajari.com/docconv)
-[![Sourcegraph](https://sourcegraph.com/github.com/sajari/docconv/-/badge.svg)](https://sourcegraph.com/github.com/sajari/docconv)
+[![Go reference](https://pkg.go.dev/badge/github.com/luisfurquim/docconv.svg)](https://pkg.go.dev/github.com/luisfurquim/docconv)
+[![Build status](https://github.com/luisfurquim/docconv/workflows/Go/badge.svg?branch=master)](https://github.com/luisfurquim/docconv/actions)
+[![Report card](https://goreportcard.com/badge/github.com/luisfurquim/docconv)](https://goreportcard.com/report/github.com/luisfurquim/docconv)
+[![Sourcegraph](https://sourcegraph.com/github.com/luisfurquim/docconv/-/badge.svg)](https://sourcegraph.com/github.com/luisfurquim/docconv)
 
 A Go wrapper library to convert PDF, DOC, DOCX, XML, HTML, RTF, ODT, Pages documents and images (see optional dependencies below) to plain text.
 
-> **Note for returning users:** the Go import path for this package changed to `code.sajari.com/docconv`.
+> **Note for returning users:** the Go import path for this package changed to `github.com/luisfurquim/docconv`.
 
 ## Installation
 
@@ -15,7 +15,7 @@ If you haven't setup Go before, you first need to [install Go](https://golang.or
 
 To fetch and build the code:
 
-    $ go get code.sajari.com/docconv/...
+    $ go get github.com/luisfurquim/docconv/...
 
 This will also build the command line tool `docd` into `$GOPATH/bin`. Make sure that `$GOPATH/bin` is in your `PATH` environment variable.
 
@@ -92,7 +92,7 @@ import (
    "fmt"
    "log"
 
-   "code.sajari.com/docconv"
+   "github.com/luisfurquim/docconv"
 )
 
 func main() {
@@ -113,7 +113,7 @@ import (
    "fmt"
    "log"
 
-   "code.sajari.com/docconv/client"
+   "github.com/luisfurquim/docconv/client"
 )
 
 func main() {
